@@ -1,7 +1,7 @@
 nubarchiva Alfresco
 ===================
 
-nubarchiva Alfresco es una personalización de Alfresco Record Management 2.0 para adaptarse a la normativa [ISAD(G)](http://www.mcu.es/archivos/docs/isad.pdf)
+nubarchiva Alfresco es una personalización de [Alfresco Record Management 2.0](http://wiki.alfresco.com/wiki/Records_Management) para adaptarse a la normativa [ISAD(G)](http://www.mcu.es/archivos/docs/isad.pdf)
 
 Documentación
 -------------
