@@ -9,12 +9,12 @@ Documentación
 Documentación incluida en el [repositorio git](https://github.com/keensoft/nubarchiva-Alfresco/tree/master/docs/5_documentacion).
 
 Instalación
-------------
+-----------
 
 Todas las instrucciones de instalación están localizadas en [Documentación](https://github.com/keensoft/nubarchiva-Alfresco/tree/master/docs/5_documentacion).
 
-License
--------
+Licencia
+--------
 
 Este desarrollo esta bajo licencia [LGPL v3.0](http://www.gnu.org/licenses/lgpl-3.0.html).
 
