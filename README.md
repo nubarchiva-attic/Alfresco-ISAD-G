@@ -6,12 +6,12 @@ nubarchiva Alfresco es una personalización de [Alfresco Record Management 2.0](
 Documentación
 -------------
 
-Documentación incluida en el [repositorio git](https://github.com/keensoft/nubarchiva-Alfresco/docs/5_documentacion).
+Documentación incluida en el [repositorio git](https://github.com/keensoft/nubarchiva-Alfresco/tree/master/docs/5_documentacion).
 
 Instalación
 ------------
 
-Todas las instrucciones de instalación están localizadas en [Documentación](https://github.com/keensoft/nubarchiva-Alfresco/docs/5_documentacion).
+Todas las instrucciones de instalación están localizadas en [Documentación](https://github.com/keensoft/nubarchiva-Alfresco/tree/master/docs/5_documentacion).
 
 License
 -------
