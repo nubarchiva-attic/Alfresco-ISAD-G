@@ -20,4 +20,4 @@ License
 
 Este desarrollo esta bajo licencia. Ver la licencia completa en:
 
-[Leer la documentación](http://www.gnu.org/licenses/lgpl-3.0.html)
+[Licencia](http://www.gnu.org/licenses/lgpl-3.0.html)
