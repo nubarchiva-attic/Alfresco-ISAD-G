@@ -1,14 +1,12 @@
 nubarchiva Alfresco
 ===================
 
-nuvarchiva Alfresco es una personalización de Alfresco Record Management 2.0 para adaptarse a la normativa ISAD - G
+nubarchiva Alfresco es una personalización de Alfresco Record Management 2.0 para adaptarse a la normativa [ISAD(G)](http://www.mcu.es/archivos/docs/isad.pdf)
 
 Documentación
 -------------
 
-La documentación asociada esta en :
-
-[Leer la documentación](https://github.com/keensoft/nubarchiva-Alfresco/docs/5_documentacion)
+Documentación incluida en el [repositorio git](https://github.com/keensoft/nubarchiva-Alfresco/docs/5_documentacion).
 
 Instalación
 ------------
@@ -18,6 +16,6 @@ Todas las instrucciones de instalación están localizadas en [Documentación](h
 License
 -------
 
-Este desarrollo esta bajo licencia. Ver la licencia completa en:
+Este desarrollo esta bajo licencia [LGPL v3.0](http://www.gnu.org/licenses/lgpl-3.0.html).
 
-[Licencia](http://www.gnu.org/licenses/lgpl-3.0.html)
+
