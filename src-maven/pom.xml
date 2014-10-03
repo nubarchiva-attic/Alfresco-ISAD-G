@@ -1,0 +1,133 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<groupId>org.alfresco.maven</groupId>
+		<artifactId>alfresco-sdk-parent</artifactId>
+		<version>1.1.1</version>
+	</parent>
+	
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>es.keensoft</groupId>
+	<artifactId>rm-alfresco</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+	<name>RM Alfresco</name>
+	<description>RM customization</description>
+
+	<properties>		
+        
+		<skipTests>false</skipTests>		
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		
+		<!-- Defines the alfresco edition to compile against. Allowed values are [org.alfresco|org.alfresco.enterprise]--> 
+        <alfresco.groupId>org.alfresco</alfresco.groupId>
+        <!-- Defines the alfresco version to compile against -->
+        <alfresco.version>4.2.f</alfresco.version>
+
+        <dist>${user.dir}/dist</dist>
+
+	</properties>
+
+	<profiles>
+		<profile>
+			<id>loc</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<env>loc</env>
+				<skipTests>false</skipTests>
+			</properties>
+		</profile>
+		<profile>
+			<id>test</id>
+			<properties>
+				<env>test</env>
+				<skipTests>true</skipTests>
+			</properties>
+		</profile>
+		<profile>
+			<id>pre</id>
+			<properties>
+				<env>pre</env>
+				<skipTests>true</skipTests>
+			</properties>
+		</profile>
+		<profile>
+			<id>pro</id>
+			<properties>
+				<env>pro</env>
+				<skipTests>true</skipTests>
+			</properties>
+		</profile>
+	</profiles>
+
+	<modules>
+		<module>ks-rm-repo</module>
+		<module>ks-rm-share</module>		
+	</modules>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- This will import the dependencyManagement for all artifacts in the selected Alfresco version/edition
+                (see http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Importing_Dependencies) 
+                NOTE: You still need to define dependencies in your POM, but you can omit version as it's enforced by this dependencyManagement. NOTE: It defaults 
+                to the latest version this SDK pom has been tested with, but alfresco version can/should be overridden in your project's pom -->
+            <dependency>
+                <groupId>${alfresco.groupId}</groupId>
+                <artifactId>alfresco-platform-distribution</artifactId>
+                <version>${alfresco.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <!-- Following dependencies are needed for compiling Java code in src/main/java; 
+         <scope>provided</scope> is inherited for each of the following; 
+         for more info, please refer to alfresco-platform-distribution POM -->
+    <dependencies>
+        <dependency>
+            <groupId>${alfresco.groupId}</groupId>
+            <artifactId>alfresco-repository</artifactId>
+        </dependency>
+        <!-- Test dependencies -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.1</version>
+            <scope>test</scope>
+        </dependency>             
+    </dependencies>
+
+	<repositories>
+		<repository>
+			<id>alfresco-public</id>
+			<url>https://artifacts.alfresco.com/nexus/content/groups/public</url>
+		</repository>
+		<repository>
+			<id>alfresco-public-snapshots</id>
+			<url>https://artifacts.alfresco.com/nexus/content/groups/public-snapshots</url>
+			<snapshots>
+				<updatePolicy>daily</updatePolicy>
+			</snapshots>
+		</repository>
+	</repositories>
+
+    <build>
+        <finalName>${project.artifactId}-${project.version}</finalName>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>7</source>
+                        <target>7</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>
